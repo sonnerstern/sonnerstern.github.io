@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAGY-BRITANNIA NINCS (2031) – ÜRES TRÓNOK</title>
+<style>
+  :root {
+    --dark: #0d1117;
+    --darker: #050810;
+    --panel: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --muted: #8b949e;
+    --gold: #d4af37;
+    --britain: #6b9bd1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--darker);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(5,8,16,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    padding: 15px 0;
+  }
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .logo {
+    font-size: 1.4em;
+    font-weight: 900;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+  }
+  nav .back {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  nav .back:hover { color: var(--gold); }
+  .hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+    background: linear-gradient(180deg, var(--darker) 0%, rgba(107,155,209,0.1) 50%, var(--dark) 100%);
+    border-bottom: 3px solid var(--britain);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '♛';
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15em;
+    color: var(--britain);
+    opacity: 0.05;
+    pointer-events: none;
+  }
+  .hero .year {
+    font-size: 1.2em;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero h1 {
+    font-size: 3.5em;
+    color: var(--britain);
+    text-shadow: 0 0 40px rgba(107,155,209,0.5);
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 1;
+  }
+  .hero .subtitle {
+    font-size: 1.4em;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero .question {
+    font-size: 1.2em;
+    color: var(--gold);
+    max-width: 700px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  section { padding: 60px 0; }
+  section h2 {
+    font-size: 2em;
+    color: var(--gold);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--border);
+  }
+  section h3 {
+    font-size: 1.4em;
+    color: var(--britain);
+    margin: 30px 0 15px;
+  }
+  p { margin-bottom: 15px; }
+  .box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0;
+  }
+  .box-britain { border-left: 4px solid var(--britain); }
+  .timeline {
+    list-style: none;
+    margin: 20px 0;
+  }
+  .timeline li {
+    padding: 15px 0 15px 40px;
+    border-left: 2px solid var(--britain);
+    position: relative;
+    margin-left: 20px;
+  }
+  .timeline li::before {
+    content: '●';
+    position: absolute;
+    left: -8px;
+    top: 18px;
+    color: var(--britain);
+    font-size: 1.2em;
+  }
+  .timeline .time {
+    font-weight: bold;
+    color: var(--britain);
+    font-family: 'Courier New', monospace;
+    margin-right: 10px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--panel);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--darker);
+    color: var(--britain);
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+  }
+  td { padding: 12px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  .quote {
+    font-style: italic;
+    text-align: center;
+    padding: 30px;
+    background: var(--panel);
+    border-radius: 8px;
+    border: 1px solid var(--britain);
+    margin: 30px 0;
+    color: var(--britain);
+    font-size: 1.1em;
+    line-height: 1.8;
+  }
+  footer {
+    background: var(--darker);
+    border-top: 1px solid var(--border);
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9em;
+  }
+  footer .quote {
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.2em; }
+    .hero .subtitle { font-size: 1.1em; }
+    section h2 { font-size: 1.5em; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">♛ ÜRES TRÓNOK</a>
+    <a href="index.html" class="back">← Vissza a főoldalra</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="year">2031. NOVEMBER 5.</div>
+  <h1>NAGY-BRITANNIA NINCS</h1>
+  <div class="subtitle">A harmadik üres trón</div>
+  <div class="question">„Mi lesz a világgal a globális pénzügyi központ nélkül?"</div>
+</div>
+
+<section>
+  <div class="container">
+    
+    <h2>AZ ALAPTÖRTÉNET</h2>
+    
+    <p><strong>2031. november 5., 04:17 UTC.</strong> A világ minden obszervatóriuma, műholdja és műszere ugyanazt rögzítette: a brit szigetek <strong>eltűntek</strong>. Nem süllyedtek el, nem robbantak fel – egyszerűen nem voltak ott. A helyén üres tenger maradt, mintha soha nem is létezett volna.</p>
+    
+    <h3>Az első 72 óra</h3>
+    
+    <ul class="timeline">
+      <li><span class="time">04:17</span> Az első műholdfelvételek megerősítik: Nagy-Britannia <strong>nincs</strong>.</li>
+      <li><span class="time">04:45</span> A globális pénzügyi piacok azonnal leállnak. A londoni City eltűnt, a font értéktelenné válik.</li>
+      <li><span class="time">05:30</span> A globális bankrendszer összeomlik. A londoni elszámolóházak nincsenek.</li>
+      <li><span class="time">06:00</span> Az ENSZ rendkívüli ülést hív össze. A világ vezetői sokkban vannak.</li>
+      <li><span class="time">08:00</span> A Commonwealth széthullik. A volt gyarmatok önálló utakra lépnek.</li>
+      <li><span class="time">12:00</span> Kína bejelenti, hogy átveszi Nagy-Britannia szerepét a globális pénzügyekben.</li>
+      <li><span class="time">18:00</span> Az EU válságcsúcsot tart. A brit kiválás (Brexit) értelmét veszti – az EU megerősödik.</li>
+      <li><span class="time">24:00</span> Az első pénzügyi pánik tör ki világszerte.</li>
+      <li><span class="time">48:00</span> Az első regionális háborúk kitörnek a volt brit gyarmatokon.</li>
+      <li><span class="time">72:00</span> A világ elfogadja: Nagy-Britannia nincs többé. Az új rend kezdődik.</li>
+    </ul>
+    
+    <h3>A világ 2031-ben</h3>
+    
+    <table>
+      <tr><th>Régió</th><th>Helyzet</th></tr>
+      <tr><td>Európa</td><td>Pénzügyi válság – a londoni City eltűnt. Az EU megerősödött (Brexit értelmét vesztette).</td></tr>
+      <tr><td>Kína</td><td>Globális pénzügyi központ – átvette London szerepét. A jüan világpénzzé válik.</td></tr>
+      <tr><td>India</td><td>Feltörőben – a Commonwealth széthullása lehetőség India számára.</td></tr>
+      <tr><td>Közel-Kelet</td><td>Olajár-robbanás – a brit pénzügyi közvetítés eltűnt, az olajkereskedelem átrendeződik.</td></tr>
+      <tr><td>Afrika</td><td>Nyersanyag-boom, de intézményi gyengeség. A Commonwealth széthullott.</td></tr>
+      <tr><td>Közép-Ázsia</td><td>Stabilizálódás – Oroszország (2029) eltűnése után új rend alakul.</td></tr>
+      <tr><td>Amerika</td><td>Nincs – 2027-ben eltűnt. Az „üres hely" még mindig üres.</td></tr>
+    </table>
+    
+    <h2>A JÁTÉK</h2>
+    
+    <div class="box box-britain">
+      <strong>NAGY-BRITANNIA NINCS</strong> a harmadik játék az <strong>ÜRES TRÓNOK</strong> sorozatban. A játékosok regionális hatalmak vezetői, akik a globális pénzügyi központ nélküli világban próbálnak túlélni, alkalmazkodni és új rendet építeni.
+    </div>
+    
+    <h3>A játék menete</h3>
+    <ul>
+      <li><strong>5 forduló</strong> – 3 fázis: esemény → döntés → szövetkezés</li>
+      <li><strong>5 akciókártya</strong> – 3-at játszhatsz ki / forduló</li>
+      <li><strong>5 erőforrás + Stabilitás</strong> – 💰 Gazdaság, 🛡️ Biztonság, 🌍 Befolyás, ⚔️ Katonai erő, 🔬 Tudomány, ⚖️ Stabilitás</li>
+      <li><strong>Szövetkezés</strong> – több fordulón át, közös projektek, közös győzelem</li>
+    </ul>
+    
+    <h3>A játék filozófiája</h3>
+    
+    <div class="quote">
+      „Nem ülsz a trónra. Nem uralkodsz. Nem győzhetsz.<br>
+      Csak együtt élhetsz túl.<br>
+      A sárgolyó nem a tiéd – kölcsönkaptad.<br>
+      A szimbiózis nem választás – feltétel.<br>
+      A szuverenitás nem akadály – alap.<br>
+      A felelősség nem teher – lehetőség.<br>
+      Nincs örökség – csak hiány.<br>
+      És nincs örökös – csak játékosok.<br>
+      A trón üres – és az is marad."
+    </div>
+    
+    <h2>A KÖVETKEZŐ TRÓN</h2>
+    
+    <p>A <strong>NAGY-BRITANNIA NINCS</strong> után <strong>2033-ban</strong> jön a <strong>negyedik üres trón</strong> – <strong>KÍNA NINCS</strong>.</p>
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="kina-nincs.html" style="display: inline-block; padding: 15px 35px; background: var(--gold); color: var(--darker); text-decoration: none; border-radius: 8px; font-weight: bold;">Következő: KÍNA NINCS →</a>
+    </div>
+    
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="quote">„Nincs örökség – csak hiány. És nincs örökös – csak játékosok. A trón üres – és az is marad."</div>
+    <div>© 2031 ÜRES TRÓNOK · Társasjáték · www.urestronok.hu</div>
+  </div>
+</footer>
+
+</body>
+</html>
