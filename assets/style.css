@@ -63,3 +63,34 @@ hr{border:0;border-top:1px solid var(--line);margin:36px 0}
  .card{padding:21px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+
+/* Üres Trónok – nyitóoldali arculati kiegészítések */
+.hero-home{position:relative;isolation:isolate;min-height:min(760px,78vh);display:flex;align-items:center;padding:clamp(76px,10vw,140px) 0 100px;background:
+linear-gradient(90deg,rgba(10,10,12,.97) 0%,rgba(10,10,12,.82) 43%,rgba(10,10,12,.28) 100%),
+linear-gradient(0deg,rgba(10,10,12,.75),transparent 55%),
+url("../assets/urestronok-arculati-tabla.webp") center 42%/cover no-repeat,
+radial-gradient(ellipse at 75% 35%,rgba(199,164,91,.2),transparent 58%),#101114}
+.hero-content{position:relative;z-index:1}
+.hero-home h1{max-width:760px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(4.2rem,10vw,8.5rem);letter-spacing:.015em;line-height:.86}
+.hero-home .hero-subtitle{font:700 clamp(.78rem,1.5vw,1rem)/1.5 Arial,sans-serif;letter-spacing:.22em;color:var(--gold2);margin:-3px 0 24px}
+.hero-home p:not(.hero-subtitle){max-width:680px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:8px}
+.hero-caption{margin-top:42px;padding-top:16px;border-top:1px solid var(--line);max-width:440px;color:var(--gold2);font-style:italic}
+.card-symbol{display:block;color:var(--gold);font:700 1.8rem/1 Arial,sans-serif;margin-bottom:18px}
+.campaign-section{background:linear-gradient(180deg,rgba(199,164,91,.035),transparent)}
+.campaign-card{position:relative;min-height:230px;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,#29221a,#151519);box-shadow:var(--shadow);transition:transform .2s,border-color .2s}
+.campaign-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(227,199,127,.22),transparent 45%),linear-gradient(0deg,rgba(0,0,0,.8),transparent 80%);opacity:.9}
+.campaign-card>*{position:relative}
+.campaign-card:hover{transform:translateY(-4px);border-color:var(--gold);text-decoration:none}
+.campaign-card strong{font:700 clamp(1.45rem,2.5vw,2rem)/1.15 Georgia,serif;color:#f4e3bc;margin:10px 0}
+.campaign-card span:last-child{font-size:.88rem;color:#d0c2a1}
+.campaign-index{font:700 .65rem/1.4 Arial,sans-serif;letter-spacing:.16em;color:var(--gold2)}
+.campaign-card.america{background-color:#242027;background-image:radial-gradient(circle at 78% 25%,rgba(180,130,90,.2),transparent 42%)}
+.campaign-card.china{background-color:#2b1b17;background-image:radial-gradient(circle at 78% 25%,rgba(180,70,45,.24),transparent 42%)}
+.campaign-card.russia{background-color:#1c2027;background-image:radial-gradient(circle at 78% 25%,rgba(110,130,155,.22),transparent 42%)}
+.campaign-card.britain{background-color:#24202a;background-image:radial-gradient(circle at 78% 25%,rgba(100,110,150,.22),transparent 42%)}
+.section-link{margin-top:24px}
+.section-link a{font-weight:bold;color:var(--gold2)}
+.footer-brand{color:var(--gold2);letter-spacing:.14em}
+@media(max-width:760px){.hero-home{min-height:unset;padding:78px 0 70px;background-position:58% center}.hero-home h1{font-size:clamp(3.6rem,17vw,6rem)}.campaign-card{min-height:190px}}
