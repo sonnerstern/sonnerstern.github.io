@@ -1,0 +1,1 @@
+A meglévő CNAME fájlt őrizd meg. A csomag nem tartalmazza, nehogy felülírja a jelenlegi domainbeállítást.
