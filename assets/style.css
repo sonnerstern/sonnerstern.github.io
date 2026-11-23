@@ -93,3 +93,25 @@ url("urestronok-hero.svg") center 48%/cover no-repeat,radial-gradient(ellipse at
 .section-link a{font-weight:bold;color:var(--gold2)}
 .footer-brand{color:var(--gold2);letter-spacing:.14em}
 @media(max-width:760px){.hero-home{min-height:unset;padding:78px 0 70px;background-position:58% center}.hero-home h1{font-size:clamp(3.6rem,17vw,6rem)}.campaign-card{min-height:190px}}
+
+
+/* Rogzitett, teljes oldalas kampanyhatterek */
+body.page-home,body.page-america,body.page-china,body.page-russia,body.page-britain{
+  background-color:#101114;
+  background-attachment:fixed;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+body.page-home{background-image:linear-gradient(rgba(8,9,12,.38),rgba(8,9,12,.68)),url("urestronok-fooldal.webp")}
+body.page-america{background-image:linear-gradient(rgba(8,9,12,.66),rgba(8,9,12,.82)),url("amerika-nelkul.webp")}
+body.page-china{background-image:linear-gradient(rgba(8,9,12,.66),rgba(8,9,12,.82)),url("kina-nelkul.webp")}
+body.page-russia{background-image:linear-gradient(rgba(8,9,12,.66),rgba(8,9,12,.82)),url("oroszorszag-nelkul.webp")}
+body.page-britain{background-image:linear-gradient(rgba(8,9,12,.66),rgba(8,9,12,.82)),url("nagy-britannia-nelkul.webp")}
+body.page-home .hero-home{background:transparent;border-bottom:1px solid var(--line)}
+body.page-home main>section:not(.hero-home){background:rgba(12,13,16,.78)}
+body.page-america .hero,body.page-china .hero,body.page-russia .hero,body.page-britain .hero{background:transparent}
+body.page-america main>section,body.page-china main>section,body.page-russia main>section,body.page-britain main>section{background:rgba(12,13,16,.78)}
+@media(max-width:760px){
+  body.page-home,body.page-america,body.page-china,body.page-russia,body.page-britain{background-position:center top;background-attachment:fixed}
+}
