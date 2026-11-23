@@ -69,7 +69,7 @@ hr{border:0;border-top:1px solid var(--line);margin:36px 0}
 .hero-home{position:relative;isolation:isolate;min-height:min(760px,78vh);display:flex;align-items:center;padding:clamp(76px,10vw,140px) 0 100px;background:
 linear-gradient(90deg,rgba(10,10,12,.97) 0%,rgba(10,10,12,.82) 43%,rgba(10,10,12,.28) 100%),
 linear-gradient(0deg,rgba(10,10,12,.75),transparent 55%),
-url("../assets/urestronok-hero.svg") center 48%/cover no-repeat,radial-gradient(ellipse at 75% 35%,rgba(199,164,91,.2),transparent 58%),#101114}
+url("urestronok-hero.svg") center 48%/cover no-repeat,radial-gradient(ellipse at 75% 35%,rgba(199,164,91,.2),transparent 58%),#101114}
 .hero-content{position:relative;z-index:1}
 .hero-home h1{max-width:760px;font-family:Georgia,"Times New Roman",serif;font-size:clamp(4.2rem,10vw,8.5rem);letter-spacing:.015em;line-height:.86}
 .hero-home .hero-subtitle{font:700 clamp(.78rem,1.5vw,1rem)/1.5 Arial,sans-serif;letter-spacing:.22em;color:var(--gold2);margin:-3px 0 24px}
