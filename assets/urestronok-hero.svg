@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">Üres Trónok – a hatalom üresen maradt helye</title><desc id="d">Arany trón vörös bársonnyal, sötét égbolt és stilizált világtérkép.</desc>
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#09090b"/><stop offset=".56" stop-color="#382014"/><stop offset="1" stop-color="#100d0b"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#f3c66c" stop-opacity=".92"/><stop offset=".3" stop-color="#bd7429" stop-opacity=".45"/><stop offset="1" stop-color="#24130d" stop-opacity="0"/></radialGradient>
+ <linearGradient id="gold" x2="1" y2="1"><stop stop-color="#fff0b0"/><stop offset=".35" stop-color="#c58b37"/><stop offset=".7" stop-color="#754318"/><stop offset="1" stop-color="#f0c76d"/></linearGradient>
+ <linearGradient id="cloth" x2="1" y2="1"><stop stop-color="#7c1115"/><stop offset=".55" stop-color="#31090d"/><stop offset="1" stop-color="#a62920"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="36"/></filter>
+ <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#d8a64d" stroke-opacity=".12"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/><ellipse cx="850" cy="350" rx="520" ry="370" fill="url(#glow)" filter="url(#blur)"/>
+<path d="M0 475L100 420 180 458 255 380 335 455 430 390 520 475 620 420 730 470 840 390 930 455 1030 385 1140 460 1250 400 1360 465 1460 390 1600 460V680H0Z" fill="#15100e" opacity=".9"/>
+<g fill="#21150f" stroke="#a87532" stroke-opacity=".45" stroke-width="3">
+ <path d="M40 520V380h65v140M54 380v-35h37v35M130 520V420h88v100M145 420v-48h58v48M1370 520V400h80v120M1390 400v-48h40v48M1490 520V360h65v160M1505 360v-50h35v50"/>
+ <path d="M270 520V445l55-55 55 55v75M295 445v-65h60v65M1120 520V450l60-65 60 65v70M1147 450v-80h66v80"/>
+</g>
+<path d="M0 620Q360 560 800 615T1600 600V900H0Z" fill="#0b0b0c"/>
+<path d="M0 660Q400 590 800 650T1600 640V900H0Z" fill="url(#grid)" stroke="#a87532" stroke-opacity=".4" stroke-width="2"/>
+<g fill="none" stroke="#c99a4d" stroke-opacity=".55" stroke-width="2">
+ <path d="M80 780Q400 650 800 770T1510 760M120 850Q500 710 800 830T1470 830"/>
+ <path d="M260 660Q400 750 520 880M560 640Q700 760 760 900M1030 640Q900 770 870 900M1320 650Q1150 760 1110 900"/>
+ <circle cx="800" cy="760" r="220" stroke-dasharray="8 14"/><circle cx="800" cy="760" r="290" stroke-dasharray="3 18"/>
+</g>
+<g transform="translate(570 115)">
+ <ellipse cx="230" cy="535" rx="310" ry="55" fill="#000" opacity=".65"/>
+ <path d="M35 495L75 185Q85 150 125 150H335Q375 150 385 185L425 495Z" fill="url(#gold)" stroke="#f2d28b" stroke-width="8"/>
+ <path d="M105 470L135 220Q140 190 175 190H285Q320 190 325 220L355 470Z" fill="#1b1110" stroke="#6e431c" stroke-width="10"/>
+ <path d="M135 440V245Q135 210 175 210H285Q325 210 325 245V440Z" fill="url(#cloth)" stroke="#d4a34e" stroke-width="8"/>
+ <path d="M80 485L45 545H415L380 485Z" fill="url(#gold)" stroke="#f1d28b" stroke-width="7"/>
+ <path d="M165 210L150 90 195 120 230 25 265 120 310 90 295 210Z" fill="url(#gold)" stroke="#f5d68e" stroke-width="8"/>
+ <path d="M185 200Q225 145 270 200L290 460Q250 505 205 460Z" fill="url(#cloth)" stroke="#a86a34" stroke-width="5"/>
+ <path d="M200 445Q220 485 260 505L340 550 390 520 305 430Z" fill="#5d0c11" stroke="#c78e45" stroke-width="5"/>
+ <g fill="#f8df9c"><circle cx="230" cy="24" r="12"/><circle cx="150" cy="90" r="9"/><circle cx="310" cy="90" r="9"/></g>
+ <path d="M15 550H445L480 590H-20Z" fill="#4a2b17" stroke="#c99547" stroke-width="6"/>
+</g>
+<g fill="#e6bf70" opacity=".75"><circle cx="250" cy="210" r="3"/><circle cx="430" cy="280" r="4"/><circle cx="1240" cy="235" r="3"/><circle cx="1390" cy="300" r="4"/><circle cx="1080" cy="150" r="3"/><circle cx="350" cy="120" r="3"/></g>
+<path d="M0 22H1600M0 878H1600" stroke="#b8873d" stroke-opacity=".65" stroke-width="3"/>
+</svg>
